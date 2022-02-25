@@ -1,0 +1,21 @@
+{
+  "name": "spenmo-api-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^9.1.2",
+    "mochawesome": "^6.3.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0",
+    "supertest": "^6.2.2"
+  },
+  "scripts": {
+    "clean:reports": "rm -R -f mochawesome-report || mkdir mochawesome-report",
+    "pretest": "npm run clean:reports",
+    "test": "mocha ./e2e/money_transfer/*.js --reporter mochawesome --timeout 20000"
+  },
+  "keywords": [],
+  "author": "Kanchan Bhendarkar"
+}
